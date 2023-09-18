@@ -53,17 +53,15 @@ def main():
     packages = ['cymetric']
     pack_dir = {'cymetric': 'cymetric'}
     setup_kwargs = {
-        "name": "cymetric",
         "version": VERSION,
         "description": 'Cyclus Metric Calculator',
         "author": 'Cyclus Development Team',
         "author_email": 'cyclus-dev@googlegroups.com',
         "url": 'http://fuelcycle.org/',
-        "packages": packages,
         "package_dir": pack_dir,
         "scripts": scripts,
     }
-    rtn = core.setup(**setup_kwargs)
+    rtn = core.setup(name='cymetric', packages=packages,**setup_kwargs)
     return rtn
 
 
